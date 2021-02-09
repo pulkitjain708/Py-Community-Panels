@@ -1,0 +1,77 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content%}
+{% include 'partials/navbar.html'%}
+{% include 'partials/sidebar.html'%}
+<br><br><br><br>
+    <div class="container shadow-lg p-3 mb-5 bg-white rounded">
+        <div style="border:1px solid black;height:150px;width:150px">
+               <img height="150px" width="150px" src="media/{{user.up.profile}}">
+        </div>
+        <br>
+   <div class="row">
+       <div class="col">
+            <div class="card shadow p-3 mb-5 bg-white rounded ">
+                    <div class="card-header">
+                      Email
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">{{user.email}}</h3>
+                    </div>
+                  </div>
+       </div>
+       <div class="col"><div class="card shadow p-3 mb-5 bg-white rounded">
+            <div class="card-header">
+                      Gender
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">{{user.up.gender}}</h3>
+            </div>
+          </div></div>
+   </div>
+   <div class="row">
+        <div class="col">
+                <div class="card shadow p-3 mb-5 bg-white rounded">
+                        <div class="card-header">
+                          Name
+                        </div>
+                        <div class="card-body">
+                          <h3 class="card-title">{{user.username}}</h3>
+                        </div>
+                    </div>
+        </div>
+       <div class="col">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+                    <div class="card-header">
+                      City
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">{{user.up.city}}</h3>
+                    </div>
+                  </div>
+       </div>
+    </div>
+    <div class="row">
+        <div class="col">
+                <div class="card shadow p-3 mb-5 bg-white rounded" >
+                        <div class="card-header">
+                          D.O.B
+                        </div>
+                        <div class="card-body">
+                          <h3 class="card-title">{{user.up.dob}}</h3>
+                        </div>
+                      </div>
+        </div>
+       <div class="col">
+            <div class="card shadow p-3 mb-5 bg-white rounded ">
+                    <div class="card-header">
+                    Phone
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">{{user.up.phone}}</h3>
+                    </div>
+                  </div>
+       </div>
+    </div>
+    </div>
+    {% endblock %}
